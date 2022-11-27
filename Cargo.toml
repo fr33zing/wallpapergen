@@ -1,0 +1,14 @@
+[package]
+name = "wallpapergen"
+version = "0.1.0"
+edition = "2021"
+license = "GPL-3.0-or-later"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.0.27", features = ["derive"] }
+csscolorparser = { version = "0.6.2", features = ["serde"] }
+image = "0.24.5"
+rand = "0.8.5"
+rayon = "1.6.0"
