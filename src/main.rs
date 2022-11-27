@@ -138,11 +138,7 @@ fn main() {
         })
         .collect();
 
-    let output = args
-        .output
-        .unwrap_or_else(|| timestamp_filename())
-        .canonicalize()
-        .expect("failed to canonicalize output path");
+    let output = args.output.unwrap_or_else(|| timestamp_filename());
     image::save_buffer(
         output.clone(),
         &pixels,
@@ -151,6 +147,5 @@ fn main() {
         image::ColorType::Rgb8,
     )
     .expect("failed to write image file");
-
     println!("{}", output.display());
 }
