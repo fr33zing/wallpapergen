@@ -1,7 +1,8 @@
 [package]
 name = "wallpapergen"
 description = "Gradient wallpaper generator"
-version = "0.2.4"
+repository = "https://github.com/fr33zing/wallpapergen"
+version = "0.2.5"
 edition = "2021"
 license = "GPL-3.0-or-later"
 build = "src/build.rs"
