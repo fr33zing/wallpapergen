@@ -2,10 +2,6 @@
 
 A CLI tool for generating gradient wallpapers.
 
-![Wallpaper sample 1](./examples/1.png)
-![Wallpaper sample 2](./examples/2.png)
-![Wallpaper sample 3](./examples/3.png)
-
 ## Installation
 
 If you don't have Rust, follow the installation instructions [here][rust].
@@ -24,7 +20,7 @@ Run the following command to view help:
 wallpapergen --help
 ```
 
-Here is the command used to generate the examples seen above:
+Here is the command used to generate the samples seen below:
 
 ```sh
 wallpapergen -W 825 -H 350 \
@@ -44,6 +40,16 @@ wallpapergen -W 825 -H 350 \
 ```
 
 (These colors are from [catppuccin][catppuccin])
+
+## Samples
+
+![Wallpaper sample 1](./examples/1.png)
+![Wallpaper sample 2](./examples/2.png)
+![Wallpaper sample 3](./examples/3.png)
+![Wallpaper sample 4](./examples/4.png)
+![Wallpaper sample 5](./examples/5.png)
+
+
 
 [rust]: <https://www.rust-lang.org/tools/install>
 [catppuccin]: <https://github.com/catppuccin/catppuccin>
