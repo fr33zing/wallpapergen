@@ -62,6 +62,11 @@ wallpapergen -W 825 -H 350 \
 
 (These colors are from [catppuccin][catppuccin])
 
+## Issues
+
+This project is *very early* and may be buggy. Please file an issue if you have
+a problem.
+
 ## Window manager integration
 
 This program will print the path of the output file before it exits, so you can
@@ -100,7 +105,6 @@ using a variable.
 ![Wallpaper sample 2](https://github.com/fr33zing/wallpapergen/blob/main/examples/2.png?raw=true)
 ![Wallpaper sample 3](https://github.com/fr33zing/wallpapergen/blob/main/examples/3.png?raw=true)
 ![Wallpaper sample 4](https://github.com/fr33zing/wallpapergen/blob/main/examples/4.png?raw=true)
-
 
 [rust]: <https://www.rust-lang.org/tools/install>
 [catppuccin]: <https://github.com/catppuccin/catppuccin>
