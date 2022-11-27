@@ -1,11 +1,15 @@
 # wallpapergen
 
-![Crates.io](https://img.shields.io/crates/v/wallpapergen)
-![Crates.io](https://img.shields.io/crates/l/wallpapergen)
+<a href="https://crates.io/crates/wallpapergen">
+    <img alt="crates.io" src="https://img.shields.io/crates/v/wallpapergen" />
+</a>
+<a href="https://www.gnu.org/licenses/gpl-3.0.en.html">
+    <img alt="GNU GPL 3.0 or later" src="https://img.shields.io/crates/l/wallpapergen" />
+</a>
 
 A CLI tool for generating gradient wallpapers.
 
-([View samples](#samples))
+[**View samples**](#samples)
 
 ## Installation
 
@@ -24,6 +28,10 @@ Run the following command to view help:
 ```sh
 wallpapergen --help
 ```
+
+If the command isn't found, you will need to add `~/.cargo/bin` to your `$PATH`.
+
+## Examples
 
 Here is the command used to generate the samples seen below:
 
