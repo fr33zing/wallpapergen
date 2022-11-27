@@ -1,5 +1,8 @@
 # wallpapergen
 
+![Crates.io](https://img.shields.io/crates/v/wallpapergen)
+![Crates.io](https://img.shields.io/crates/l/wallpapergen)
+
 A CLI tool for generating gradient wallpapers.
 
 ## Installation
