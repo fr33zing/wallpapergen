@@ -47,8 +47,6 @@ wallpapergen -W 825 -H 350 \
 ![Wallpaper sample 2](./examples/2.png)
 ![Wallpaper sample 3](./examples/3.png)
 ![Wallpaper sample 4](./examples/4.png)
-![Wallpaper sample 5](./examples/5.png)
-
 
 
 [rust]: <https://www.rust-lang.org/tools/install>
