@@ -149,6 +149,8 @@ fn main() {
         args.width,
         args.height,
         image::ColorType::Rgb8,
-    );
+    )
+    .expect("failed to write image file");
+
     println!("{}", output.display());
 }
