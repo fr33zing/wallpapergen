@@ -1,9 +1,8 @@
 #!/bin/sh
 
 cargo run --release -- \
-    -W 3440 \
-    -H 1440 \
-    -c '#f5e0dc' \
+    -W 825 \
+    -H 350 \
     -c '#f2cdcd' \
     -c '#f5c2e7' \
     -c '#cba6f7' \
