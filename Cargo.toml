@@ -4,6 +4,7 @@ description = "Gradient wallpaper generator"
 version = "0.2.3"
 edition = "2021"
 license = "GPL-3.0-or-later"
+build = "src/build.rs"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
