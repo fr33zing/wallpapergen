@@ -104,7 +104,7 @@ fn timestamp_filename() -> PathBuf {
     cwd.join(&filename)
 }
 
-fn main() -> Result<(), image::ImageError> {
+fn main() {
     let args = Args::parse();
     let mut rng = new_rng(args.seed);
     let w = args.width as f64;
@@ -138,13 +138,17 @@ fn main() -> Result<(), image::ImageError> {
         })
         .collect();
 
-    let output = args.output.unwrap_or_else(|| timestamp_filename());
-    println!("Writing output to {:?}", output);
+    let output = args
+        .output
+        .unwrap_or_else(|| timestamp_filename())
+        .canonicalize()
+        .expect("failed to canonicalize output path");
     image::save_buffer(
-        output,
+        output.clone(),
         &pixels,
         args.width,
         args.height,
         image::ColorType::Rgb8,
-    )
+    );
+    println!("{}", output.display());
 }
