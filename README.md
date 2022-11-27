@@ -29,7 +29,15 @@ Run the following command to view help:
 wallpapergen --help
 ```
 
-If the command isn't found, you will need to add `~/.cargo/bin` to your `$PATH`.
+If the command isn't found, you will need to add `~/.cargo/bin` to your path.
+
+```sh
+# bash
+echo 'export PATH=$PATH:~/.cargo/bin' >> ~/.bashrc
+
+# zsh
+echo 'export PATH=$PATH:~/.cargo/bin' >> ~/.zshrc
+```
 
 ## Examples
 
@@ -53,6 +61,38 @@ wallpapergen -W 825 -H 350 \
 ```
 
 (These colors are from [catppuccin][catppuccin])
+
+## Window manager integration
+
+This program will print the path of the output file before it exits, so you can
+use `xargs` to pipe it to your wallpaper program. Here's my personal script:
+
+``` sh
+wallpapergen -o ~/.wallpaper.png \
+    -W 3440      \
+    -H 1440      \
+    -c '#f2cdcd' \
+    -c '#f5c2e7' \
+    -c '#cba6f7' \
+    -c '#f38ba8' \
+    -c '#eba0ac' \
+    -c '#fab387' \
+    -c '#f9e2af' \
+    -c '#a6e3a1' \
+    -c '#94e2d5' \
+    -c '#89dceb' \
+    -c '#74c7ec' \
+    -c '#89b4fa' \
+    -c '#b4befe' \
+    | xargs -I{} swww img {}      \
+        --transition-type  'grow' \
+        --transition-speed '20'   \
+        --transition-fps   '100'  \
+        --transition-pos   0.5,0.5
+```
+
+Unnecessary, but it removes the need to repeat the output file path without
+using a variable.
 
 ## Samples
 
