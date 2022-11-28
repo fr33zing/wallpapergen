@@ -2,7 +2,7 @@
 name = "wallpapergen"
 description = "Gradient wallpaper generator"
 repository = "https://github.com/fr33zing/wallpapergen"
-version = "0.2.5"
+version = "0.3.0"
 edition = "2021"
 license = "GPL-3.0-or-later"
 build = "src/build.rs"

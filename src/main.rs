@@ -13,7 +13,11 @@
 
 //! wallpapergen - gradient wallpaper generator
 
-use std::{env, path::PathBuf};
+use std::{
+    env,
+    path::PathBuf,
+    time::{SystemTime, UNIX_EPOCH},
+};
 
 use clap::Parser;
 use rand::prelude::*;
@@ -97,9 +101,13 @@ fn new_rng(seed: Option<u64>) -> SmallRng {
 }
 
 fn timestamp_filename() -> PathBuf {
-    let now = std::time::SystemTime::now();
-    let now: chrono::DateTime<chrono::Utc> = now.into();
-    let filename = format!("wallpapergen_{}.png", now.to_rfc3339());
+    // FIXME images created within the same millisecond will overwrite
+    let epoch_ms = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .expect("failed to compute time since unix epoch")
+        .as_millis()
+        .to_string();
+    let filename = format!("wallpapergen_{epoch_ms}.png");
     let cwd = env::current_dir().expect("failed to get current working directory");
     cwd.join(&filename)
 }
