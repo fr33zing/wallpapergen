@@ -32,12 +32,11 @@ wallpapergen --help
 If the command isn't found, you will need to add `~/.cargo/bin` to your path.
 
 ```sh
-# bash
 echo 'export PATH=$PATH:~/.cargo/bin' >> ~/.bashrc
-
-# zsh
-echo 'export PATH=$PATH:~/.cargo/bin' >> ~/.zshrc
+source ~/.bashrc
 ```
+
+*If you're using zsh, replace `~/.bashrc` with `~/.zshrc`.*
 
 ## Examples
 
@@ -66,6 +65,14 @@ wallpapergen -W 825 -H 350 \
 
 This project is *very early* and may be buggy. Please file an issue if you have
 a problem.
+
+### Troubleshooting
+
+* Output paths passed in quotes may fail, prefer `-o ~/example.png` over `-o
+  '~/example.png'` when possible.
+* Wallpapers generated within 1ms of each other will overwrite if no output path
+  is specified. This occurs because the default filename includes the time in
+  milliseconds.
 
 ## Window manager integration
 
